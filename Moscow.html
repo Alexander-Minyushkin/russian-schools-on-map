@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Рейтинг школ на карте.</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
+    <script type="text/javascript">
+        // Создает обработчик события window.onLoad
+        YMaps.jQuery(function () {
+            // Создает экземпляр карты и привязывает его к созданному контейнеру
+            var map = new YMaps.Map(YMaps.jQuery("#YMapsID")[0]);
+            
+            // Устанавливает начальные параметры отображения карты: центр карты и коэффициент масштабирования
+            map.setCenter(new YMaps.GeoPoint(37.64, 55.76), 10);
+            map.addControl(new YMaps.Zoom());            
+            map.addControl(new YMaps.ToolBar());
+
+    var placemark_1 = new YMaps.Placemark(new YMaps.GeoPoint(37.4818,55.713181));            
+    placemark_1.name = '"ГБПОУ ""1-Й МОК"""';
+    placemark_1.description = "Место в рейтинге 31";
+    map.addOverlay(placemark_1); 
+    
+    var placemark_2 = new YMaps.Placemark(new YMaps.GeoPoint(37.537704,55.689229));            
+    placemark_2.name = '"ГБПОУ ""1-Й МОК"""';
+    placemark_2.description = "Место в рейтинге 31";
+    map.addOverlay(placemark_2); 
+    
+    var placemark_3 = new YMaps.Placemark(new YMaps.GeoPoint(37.745255,55.682286));            
+    placemark_3.name = '"ГБПОУ ""1-Й МОК"""';
+    placemark_3.description = "Место в рейтинге 31";
+    map.addOverlay(placemark_3); 
+    
+    var placemark_4 = new YMaps.Placemark(new YMaps.GeoPoint(37.569546,55.511573));            
+    placemark_4.name = '"ГБПОУ ""1-Й МОК"""';
+    placemark_4.description = "Место в рейтинге 31";
+    map.addOverlay(placemark_4); 
+    
+    var placemark_5 = new YMaps.Placemark(new YMaps.GeoPoint(37.4818,55.713181));            
+    placemark_5.name = 'ГКОУ КШИ № 1';
+    placemark_5.description = "Место в рейтинге 100";
+    map.addOverlay(placemark_5); 
+    
+    var placemark_6 = new YMaps.Placemark(new YMaps.GeoPoint(37.537704,55.689229));            
+    placemark_6.name = 'ГКОУ КШИ № 1';
+    placemark_6.description = "Место в рейтинге 100";
+    map.addOverlay(placemark_6); 
+    
+    var placemark_7 = new YMaps.Placemark(new YMaps.GeoPoint(37.745255,55.682286));            
+    placemark_7.name = 'ГКОУ КШИ № 1';
+    placemark_7.description = "Место в рейтинге 100";
+    map.addOverlay(placemark_7); 
+    
+    var placemark_8 = new YMaps.Placemark(new YMaps.GeoPoint(37.569546,55.511573));            
+    placemark_8.name = 'ГКОУ КШИ № 1';
+    placemark_8.description = "Место в рейтинге 100";
+    map.addOverlay(placemark_8); 
+    
+    var placemark_9 = new YMaps.Placemark(new YMaps.GeoPoint(37.4818,55.713181));            
+    placemark_9.name = 'ГБОУ ШОР № 1';
+    placemark_9.description = "Место в рейтинге 149";
+    map.addOverlay(placemark_9); 
+    
+    var placemark_10 = new YMaps.Placemark(new YMaps.GeoPoint(37.537704,55.689229));            
+    placemark_10.name = 'ГБОУ ШОР № 1';
+    placemark_10.description = "Место в рейтинге 149";
+    map.addOverlay(placemark_10); 
+    
+    var placemark_11 = new YMaps.Placemark(new YMaps.GeoPoint(37.745255,55.682286));            
+    placemark_11.name = 'ГБОУ ШОР № 1';
+    placemark_11.description = "Место в рейтинге 149";
+    map.addOverlay(placemark_11); 
+    
+    var placemark_12 = new YMaps.Placemark(new YMaps.GeoPoint(37.569546,55.511573));            
+    placemark_12.name = 'ГБОУ ШОР № 1';
+    placemark_12.description = "Место в рейтинге 149";
+    map.addOverlay(placemark_12); 
+    
+    var placemark_13 = new YMaps.Placemark(new YMaps.GeoPoint(37.570968,55.682217));            
+    placemark_13.name = 'ГБПОУ КМБ № 4';
+    placemark_13.description = "Место в рейтинге 28";
+    map.addOverlay(placemark_13); 
+    
+    var placemark_14 = new YMaps.Placemark(new YMaps.GeoPoint(37.570521,55.510197));            
+    placemark_14.name = 'ГБПОУ КМБ № 4';
+    placemark_14.description = "Место в рейтинге 28";
+    map.addOverlay(placemark_14); 
+    
+    var placemark_15 = new YMaps.Placemark(new YMaps.GeoPoint(37.368897,55.517618));            
+    placemark_15.name = 'ГБПОУ КМБ № 4';
+    placemark_15.description = "Место в рейтинге 28";
+    map.addOverlay(placemark_15); 
+    
+    var placemark_16 = new YMaps.Placemark(new YMaps.GeoPoint(37.56112,55.757587));            
+    placemark_16.name = 'ГБПОУ КМБ № 4';
+    placemark_16.description = "Место в рейтинге 28";
+    map.addOverlay(placemark_16); 
+    
+    var placemark_17 = new YMaps.Placemark(new YMaps.GeoPoint(37.539442,55.688224));            
+    placemark_17.name = 'ГАПОУ КП № 11';
+    placemark_17.description = "Место в рейтинге 135";
+    map.addOverlay(placemark_17); 
+    
+    var placemark_18 = new YMaps.Placemark(new YMaps.GeoPoint(37.559724,55.652235));            
+    placemark_18.name = 'ГБОУ ШКОЛА № 15';
+    placemark_18.description = "Место в рейтинге 126";
+    map.addOverlay(placemark_18); 
+    
+    var placemark_19 = new YMaps.Placemark(new YMaps.GeoPoint(37.532198,55.636499));            
+    placemark_19.name = 'ГБОУ ШКОЛА № 17';
+    placemark_19.description = "Место в рейтинге 108";
+    map.addOverlay(placemark_19); 
+    
+    var placemark_20 = new YMaps.Placemark(new YMaps.GeoPoint(37.515137,55.64235));            
+    placemark_20.name = 'ГБПОУ КАИТ № 20';
+    placemark_20.description = "Место в рейтинге 282";
+    map.addOverlay(placemark_20); 
+    
+    var placemark_21 = new YMaps.Placemark(new YMaps.GeoPoint(37.551367,55.695813));            
+    placemark_21.name = '"ГБПОУ ""26 КАДР"""';
+    placemark_21.description = "Место в рейтинге 186";
+    map.addOverlay(placemark_21); 
+    
+    var placemark_22 = new YMaps.Placemark(new YMaps.GeoPoint(37.545005,55.691576));            
+    placemark_22.name = '"ГБПОУ ""26 КАДР"""';
+    placemark_22.description = "Место в рейтинге 186";
+    map.addOverlay(placemark_22); 
+    
+    var placemark_23 = new YMaps.Placemark(new YMaps.GeoPoint(37.550352,55.694413));            
+    placemark_23.name = '"ГБПОУ ""26 КАДР"""';
+    placemark_23.description = "Место в рейтинге 186";
+    map.addOverlay(placemark_23); 
+    
+    var placemark_24 = new YMaps.Placemark(new YMaps.GeoPoint(37.294653,55.614268));            
+    placemark_24.name = 'ГБОУ ШКОЛА № 41';
+    placemark_24.description = "Место в рейтинге 235";
+    map.addOverlay(placemark_24); 
+    
+    var placemark_25 = new YMaps.Placemark(new YMaps.GeoPoint(37.214527,55.621377));            
+    placemark_25.name = 'ГБОУ ШКОЛА № 41';
+    placemark_25.description = "Место в рейтинге 235";
+    map.addOverlay(placemark_25); 
+    
+    var placemark_26 = new YMaps.Placemark(new YMaps.GeoPoint(37.298891,55.616116));            
+    placemark_26.name = 'ГБОУ ШКОЛА № 41';
+    placemark_26.description = "Место в рейтинге 235";
+    map.addOverlay(placemark_26); 
+    
+    var placemark_27 = new YMaps.Placemark(new YMaps.GeoPoint(37.299363,55.608456));            
+    placemark_27.name = 'ГБОУ ШКОЛА № 41';
+    placemark_27.description = "Место в рейтинге 235";
+    map.addOverlay(placemark_27); 
+    
+    var placemark_28 = new YMaps.Placemark(new YMaps.GeoPoint(37.560259,55.723941));            
+    placemark_28.name = 'ГБОУ ГИМНАЗИЯ № 45';
+    placemark_28.description = "Место в рейтинге 90";
+    map.addOverlay(placemark_28); 
+    
+    var placemark_29 = new YMaps.Placemark(new YMaps.GeoPoint(37.535585,55.645685));            
+    placemark_29.name = 'ГБОУ ШКОЛА № 49';
+    placemark_29.description = "Место в рейтинге 248";
+    map.addOverlay(placemark_29); 
+    
+    var placemark_30 = new YMaps.Placemark(new YMaps.GeoPoint(37.534049,55.643653));            
+    placemark_30.name = 'ГБОУ ШКОЛА № 49';
+    placemark_30.description = "Место в рейтинге 248";
+    map.addOverlay(placemark_30); 
+    
+    var placemark_31 = new YMaps.Placemark(new YMaps.GeoPoint(37.56971,55.723486));            
+    placemark_31.name = 'ГБПОУ КС № 54';
+    placemark_31.description = "Место в рейтинге 167";
+    map.addOverlay(placemark_31); 
+    
+    var placemark_32 = new YMaps.Placemark(new YMaps.GeoPoint(37.569939,55.724025));            
+    placemark_32.name = 'ГБПОУ КС № 54';
+    placemark_32.description = "Место в рейтинге 167";
+    map.addOverlay(placemark_32); 
+    
+    var placemark_33 = new YMaps.Placemark(new YMaps.GeoPoint(37.463517,55.779345));            
+    placemark_33.name = 'ГБОУ ШКОЛА № 138';
+    placemark_33.description = "Место в рейтинге 145";
+    map.addOverlay(placemark_33); 
+    
+    var placemark_34 = new YMaps.Placemark(new YMaps.GeoPoint(37.466639,55.779613));            
+    placemark_34.name = 'ГБОУ ШКОЛА № 138';
+    placemark_34.description = "Место в рейтинге 145";
+    map.addOverlay(placemark_34); 
+    
+    var placemark_35 = new YMaps.Placemark(new YMaps.GeoPoint(37.466423,55.782289));            
+    placemark_35.name = 'ГБОУ ШКОЛА № 138';
+    placemark_35.description = "Место в рейтинге 145";
+    map.addOverlay(placemark_35); 
+    
+    var placemark_36 = new YMaps.Placemark(new YMaps.GeoPoint(37.467193,55.780813));            
+    placemark_36.name = 'ГБОУ ШКОЛА № 138';
+    placemark_36.description = "Место в рейтинге 145";
+    map.addOverlay(placemark_36); 
+    
+    var placemark_37 = new YMaps.Placemark(new YMaps.GeoPoint(37.464521,55.781287));            
+    placemark_37.name = 'ГБОУ ШКОЛА № 138';
+    placemark_37.description = "Место в рейтинге 145";
+    map.addOverlay(placemark_37); 
+    
+    var placemark_38 = new YMaps.Placemark(new YMaps.GeoPoint(37.575102,55.719412));            
+    placemark_38.name = 'ГБОУ ШКОЛА № 171';
+    placemark_38.description = "Место в рейтинге 22";
+    map.addOverlay(placemark_38); 
+    
+    var placemark_39 = new YMaps.Placemark(new YMaps.GeoPoint(37.579394,55.722265));            
+    placemark_39.name = 'ГБОУ ШКОЛА № 171';
+    placemark_39.description = "Место в рейтинге 22";
+    map.addOverlay(placemark_39); 
+    
+    var placemark_40 = new YMaps.Placemark(new YMaps.GeoPoint(37.535393,55.836734));            
+    placemark_40.name = 'ГБОУ ШКОЛА № 185';
+    placemark_40.description = "Место в рейтинге 249";
+    map.addOverlay(placemark_40); 
+    
+    var placemark_41 = new YMaps.Placemark(new YMaps.GeoPoint(37.572533,55.706797));            
+    placemark_41.name = 'ГБОУ ШКОЛА № 192';
+    placemark_41.description = "Место в рейтинге 40";
+    map.addOverlay(placemark_41); 
+    
+    var placemark_42 = new YMaps.Placemark(new YMaps.GeoPoint(37.574765,55.706791));            
+    placemark_42.name = 'ГБОУ ШКОЛА № 192';
+    placemark_42.description = "Место в рейтинге 40";
+    map.addOverlay(placemark_42); 
+    
+    var placemark_43 = new YMaps.Placemark(new YMaps.GeoPoint(37.565868,55.692333));            
+    placemark_43.name = 'ГБОУ ШКОЛА № 199';
+    placemark_43.description = "Место в рейтинге 119";
+    map.addOverlay(placemark_43); 
+    
+    var placemark_44 = new YMaps.Placemark(new YMaps.GeoPoint(37.571564,55.690156));            
+    placemark_44.name = 'ГБОУ ШКОЛА № 199';
+    placemark_44.description = "Место в рейтинге 119";
+    map.addOverlay(placemark_44); 
+    
+    var placemark_45 = new YMaps.Placemark(new YMaps.GeoPoint(37.522942,55.884233));            
+    placemark_45.name = 'ГБОУ ШКОЛА № 236';
+    placemark_45.description = "Место в рейтинге 146";
+    map.addOverlay(placemark_45); 
+    
+    var placemark_46 = new YMaps.Placemark(new YMaps.GeoPoint(37.67093,55.889394));            
+    placemark_46.name = 'ГБОУ ШКОЛА № 283';
+    placemark_46.description = "Место в рейтинге 216";
+    map.addOverlay(placemark_46); 
+    
+    var placemark_47 = new YMaps.Placemark(new YMaps.GeoPoint(37.623911,55.876686));            
+    placemark_47.name = 'ГБОУ ШКОЛА № 285';
+    placemark_47.description = "Место в рейтинге 209";
+    map.addOverlay(placemark_47); 
+    
+    var placemark_48 = new YMaps.Placemark(new YMaps.GeoPoint(37.674832,55.783126));            
+    placemark_48.name = 'ГБОУ ШКОЛА № 315';
+    placemark_48.description = "Место в рейтинге 284";
+    map.addOverlay(placemark_48); 
+    
+    var placemark_49 = new YMaps.Placemark(new YMaps.GeoPoint(37.674636,55.782674));            
+    placemark_49.name = 'ГБОУ ШКОЛА № 315';
+    placemark_49.description = "Место в рейтинге 284";
+    map.addOverlay(placemark_49); 
+    
+    var placemark_50 = new YMaps.Placemark(new YMaps.GeoPoint(37.677963,55.769389));            
+    placemark_50.name = '"ГБОУ ""ШКОЛА № 354 ИМ. Д.М. КАРБЫШЕВА"""';
+    placemark_50.description = "Место в рейтинге 155";
+    map.addOverlay(placemark_50); 
+    
+    var placemark_51 = new YMaps.Placemark(new YMaps.GeoPoint(37.67709,55.76945));            
+    placemark_51.name = '"ГБОУ ""ШКОЛА № 354 ИМ. Д.М. КАРБЫШЕВА"""';
+    placemark_51.description = "Место в рейтинге 155";
+    map.addOverlay(placemark_51); 
+    
+    var placemark_52 = new YMaps.Placemark(new YMaps.GeoPoint(37.676817,55.769368));            
+    placemark_52.name = '"ГБОУ ""ШКОЛА № 354 ИМ. Д.М. КАРБЫШЕВА"""';
+    placemark_52.description = "Место в рейтинге 155";
+    map.addOverlay(placemark_52); 
+    
+    var placemark_53 = new YMaps.Placemark(new YMaps.GeoPoint(37.668105,55.769138));            
+    placemark_53.name = '"ГБОУ ""ШКОЛА № 354 ИМ. Д.М. КАРБЫШЕВА"""';
+    placemark_53.description = "Место в рейтинге 155";
+    map.addOverlay(placemark_53); 
+    
+    var placemark_54 = new YMaps.Placemark(new YMaps.GeoPoint(37.652045,55.737766));            
+    placemark_54.name = 'ГБОУ ШКОЛА № 498';
+    placemark_54.description = "Место в рейтинге 169";
+    map.addOverlay(placemark_54); 
+    
+    var placemark_55 = new YMaps.Placemark(new YMaps.GeoPoint(37.653728,55.668738));            
+    placemark_55.name = 'ГБОУ ШКОЛА № 507';
+    placemark_55.description = "Место в рейтинге 228";
+    map.addOverlay(placemark_55); 
+    
+    var placemark_56 = new YMaps.Placemark(new YMaps.GeoPoint(37.651026,55.668254));            
+    placemark_56.name = 'ГБОУ ШКОЛА № 507';
+    placemark_56.description = "Место в рейтинге 228";
+    map.addOverlay(placemark_56); 
+    
+    var placemark_57 = new YMaps.Placemark(new YMaps.GeoPoint(37.651617,55.669172));            
+    placemark_57.name = 'ГБОУ ШКОЛА № 507';
+    placemark_57.description = "Место в рейтинге 228";
+    map.addOverlay(placemark_57); 
+    
+    var placemark_58 = new YMaps.Placemark(new YMaps.GeoPoint(37.654025,55.665664));            
+    placemark_58.name = 'ГБОУ ШКОЛА № 507';
+    placemark_58.description = "Место в рейтинге 228";
+    map.addOverlay(placemark_58); 
+    
+    var placemark_59 = new YMaps.Placemark(new YMaps.GeoPoint(37.657402,55.672613));            
+    placemark_59.name = 'ГБОУ ШКОЛА № 507';
+    placemark_59.description = "Место в рейтинге 228";
+    map.addOverlay(placemark_59); 
+    
+    var placemark_60 = new YMaps.Placemark(new YMaps.GeoPoint(37.719717,55.596199));            
+    placemark_60.name = 'ГБОУ ШКОЛА № 544';
+    placemark_60.description = "Место в рейтинге 276";
+    map.addOverlay(placemark_60); 
+    
+    var placemark_61 = new YMaps.Placemark(new YMaps.GeoPoint(37.715729,55.606018));            
+    placemark_61.name = 'ГБОУ ШКОЛА № 544';
+    placemark_61.description = "Место в рейтинге 276";
+    map.addOverlay(placemark_61); 
+    
+    var placemark_62 = new YMaps.Placemark(new YMaps.GeoPoint(37.208308,55.992789));            
+    placemark_62.name = 'ГБОУ ШКОЛА № 618';
+    placemark_62.description = "Место в рейтинге 198";
+    map.addOverlay(placemark_62); 
+    
+    var placemark_63 = new YMaps.Placemark(new YMaps.GeoPoint(37.205608,55.993565));            
+    placemark_63.name = 'ГБОУ ШКОЛА № 618';
+    placemark_63.description = "Место в рейтинге 198";
+    map.addOverlay(placemark_63); 
+    
+    var placemark_64 = new YMaps.Placemark(new YMaps.GeoPoint(37.207675,55.993962));            
+    placemark_64.name = 'ГБОУ ШКОЛА № 618';
+    placemark_64.description = "Место в рейтинге 198";
+    map.addOverlay(placemark_64); 
+    
+    var placemark_65 = new YMaps.Placemark(new YMaps.GeoPoint(37.635404,55.724433));            
+    placemark_65.name = 'ГБОУ ШКОЛА № 627';
+    placemark_65.description = "Место в рейтинге 77";
+    map.addOverlay(placemark_65); 
+    
+    var placemark_66 = new YMaps.Placemark(new YMaps.GeoPoint(37.63618,55.732985));            
+    placemark_66.name = 'ГБОУ ШКОЛА № 627';
+    placemark_66.description = "Место в рейтинге 77";
+    map.addOverlay(placemark_66); 
+    
+    var placemark_67 = new YMaps.Placemark(new YMaps.GeoPoint(37.63618,55.732985));            
+    placemark_67.name = 'ГБОУ ШКОЛА № 627';
+    placemark_67.description = "Место в рейтинге 77";
+    map.addOverlay(placemark_67); 
+    
+    var placemark_68 = new YMaps.Placemark(new YMaps.GeoPoint(37.744656,55.701004));            
+    placemark_68.name = 'ГБОУ ШКОЛА № 654 ИМЕНИ А.Д. ФРИДМАНА';
+    placemark_68.description = "Место в рейтинге 39";
+    map.addOverlay(placemark_68); 
+    
+    var placemark_69 = new YMaps.Placemark(new YMaps.GeoPoint(37.749761,55.695601));            
+    placemark_69.name = 'ГБОУ ШКОЛА № 654 ИМЕНИ А.Д. ФРИДМАНА';
+    placemark_69.description = "Место в рейтинге 39";
+    map.addOverlay(placemark_69); 
+    
+    var placemark_70 = new YMaps.Placemark(new YMaps.GeoPoint(37.73985,55.697606));            
+    placemark_70.name = 'ГБОУ ШКОЛА № 654 ИМЕНИ А.Д. ФРИДМАНА';
+    placemark_70.description = "Место в рейтинге 39";
+    map.addOverlay(placemark_70); 
+    
+    var placemark_71 = new YMaps.Placemark(new YMaps.GeoPoint(37.394454,55.802476));            
+    placemark_71.name = 'ГБОУ ШКОЛА № 705';
+    placemark_71.description = "Место в рейтинге 251";
+    map.addOverlay(placemark_71); 
+    
+    var placemark_72 = new YMaps.Placemark(new YMaps.GeoPoint(37.556371,55.93537));            
+    placemark_72.name = 'ГБОУ ШКОЛА № 709';
+    placemark_72.description = "Место в рейтинге 154";
+    map.addOverlay(placemark_72); 
+    
+    var placemark_73 = new YMaps.Placemark(new YMaps.GeoPoint(37.694084,55.8843));            
+    placemark_73.name = 'ГБОУ ШКОЛА № 763';
+    placemark_73.description = "Место в рейтинге 162";
+    map.addOverlay(placemark_73); 
+    
+    var placemark_74 = new YMaps.Placemark(new YMaps.GeoPoint(37.474719,55.706744));            
+    placemark_74.name = 'ГБОУ ШКОЛА № 814';
+    placemark_74.description = "Место в рейтинге 94";
+    map.addOverlay(placemark_74); 
+    
+    var placemark_75 = new YMaps.Placemark(new YMaps.GeoPoint(37.410016,55.851783));            
+    placemark_75.name = 'ГБОУ ШКОЛА № 827';
+    placemark_75.description = "Место в рейтинге 270";
+    map.addOverlay(placemark_75); 
+    
+    var placemark_76 = new YMaps.Placemark(new YMaps.GeoPoint(37.413356,55.855038));            
+    placemark_76.name = 'ГБОУ ШКОЛА № 827';
+    placemark_76.description = "Место в рейтинге 270";
+    map.addOverlay(placemark_76); 
+    
+    var placemark_77 = new YMaps.Placemark(new YMaps.GeoPoint(37.417866,55.855228));            
+    placemark_77.name = 'ГБОУ ШКОЛА № 827';
+    placemark_77.description = "Место в рейтинге 270";
+    map.addOverlay(placemark_77); 
+    
+    var placemark_78 = new YMaps.Placemark(new YMaps.GeoPoint(37.171232,55.993022));            
+    placemark_78.name = 'ГБОУ ШКОЛА № 853';
+    placemark_78.description = "Место в рейтинге 83";
+    map.addOverlay(placemark_78); 
+    
+    var placemark_79 = new YMaps.Placemark(new YMaps.GeoPoint(37.191699,55.983099));            
+    placemark_79.name = 'ГБОУ ШКОЛА № 853';
+    placemark_79.description = "Место в рейтинге 83";
+    map.addOverlay(placemark_79); 
+    
+    var placemark_80 = new YMaps.Placemark(new YMaps.GeoPoint(37.184139,55.984088));            
+    placemark_80.name = 'ГБОУ ШКОЛА № 853';
+    placemark_80.description = "Место в рейтинге 83";
+    map.addOverlay(placemark_80); 
+    
+    var placemark_81 = new YMaps.Placemark(new YMaps.GeoPoint(37.190386,55.985213));            
+    placemark_81.name = 'ГБОУ ШКОЛА № 853';
+    placemark_81.description = "Место в рейтинге 83";
+    map.addOverlay(placemark_81); 
+    
+    var placemark_82 = new YMaps.Placemark(new YMaps.GeoPoint(37.186687,55.983116));            
+    placemark_82.name = 'ГБОУ ШКОЛА № 853';
+    placemark_82.description = "Место в рейтинге 83";
+    map.addOverlay(placemark_82); 
+    
+    var placemark_83 = new YMaps.Placemark(new YMaps.GeoPoint(37.19232,55.985065));            
+    placemark_83.name = 'ГБОУ ШКОЛА № 853';
+    placemark_83.description = "Место в рейтинге 83";
+    map.addOverlay(placemark_83); 
+    
+    var placemark_84 = new YMaps.Placemark(new YMaps.GeoPoint(37.17299,55.994422));            
+    placemark_84.name = 'ГБОУ ШКОЛА № 853';
+    placemark_84.description = "Место в рейтинге 83";
+    map.addOverlay(placemark_84); 
+    
+    var placemark_85 = new YMaps.Placemark(new YMaps.GeoPoint(37.69785,55.613871));            
+    placemark_85.name = 'ГБОУ ШКОЛА № 878';
+    placemark_85.description = "Место в рейтинге 204";
+    map.addOverlay(placemark_85); 
+    
+    var placemark_86 = new YMaps.Placemark(new YMaps.GeoPoint(37.439682,55.732132));            
+    placemark_86.name = 'ГБОУ ШКОЛА № 887';
+    placemark_86.description = "Место в рейтинге 226";
+    map.addOverlay(placemark_86); 
+    
+    var placemark_87 = new YMaps.Placemark(new YMaps.GeoPoint(37.666152,55.596236));            
+    placemark_87.name = '"ГБОУ ШКОЛА № 902 ""ДИАЛОГ"""';
+    placemark_87.description = "Место в рейтинге 208";
+    map.addOverlay(placemark_87); 
+    
+    var placemark_88 = new YMaps.Placemark(new YMaps.GeoPoint(37.826951,55.763148));            
+    placemark_88.name = 'ГБОУ ШКОЛА № 922';
+    placemark_88.description = "Место в рейтинге 264";
+    map.addOverlay(placemark_88); 
+    
+    var placemark_89 = new YMaps.Placemark(new YMaps.GeoPoint(37.827546,55.759877));            
+    placemark_89.name = 'ГБОУ ШКОЛА № 922';
+    placemark_89.description = "Место в рейтинге 264";
+    map.addOverlay(placemark_89); 
+    
+    var placemark_90 = new YMaps.Placemark(new YMaps.GeoPoint(37.677182,55.582619));            
+    placemark_90.name = 'ГБОУ ШКОЛА № 947';
+    placemark_90.description = "Место в рейтинге 236";
+    map.addOverlay(placemark_90); 
+    
+    var placemark_91 = new YMaps.Placemark(new YMaps.GeoPoint(37.674542,55.58477));            
+    placemark_91.name = 'ГБОУ ШКОЛА № 947';
+    placemark_91.description = "Место в рейтинге 236";
+    map.addOverlay(placemark_91); 
+    
+    var placemark_92 = new YMaps.Placemark(new YMaps.GeoPoint(37.604983,55.86027));            
+    placemark_92.name = 'ГБОУ ШКОЛА № 950';
+    placemark_92.description = "Место в рейтинге 245";
+    map.addOverlay(placemark_92); 
+    
+    var placemark_93 = new YMaps.Placemark(new YMaps.GeoPoint(37.592453,55.861527));            
+    placemark_93.name = 'ГБОУ ШКОЛА № 962';
+    placemark_93.description = "Место в рейтинге 27";
+    map.addOverlay(placemark_93); 
+    
+    var placemark_94 = new YMaps.Placemark(new YMaps.GeoPoint(37.592867,55.85975));            
+    placemark_94.name = 'ГБОУ ШКОЛА № 962';
+    placemark_94.description = "Место в рейтинге 27";
+    map.addOverlay(placemark_94); 
+    
+    var placemark_95 = new YMaps.Placemark(new YMaps.GeoPoint(37.401933,55.652362));            
+    placemark_95.name = 'ГБОУ ШКОЛА № 1002';
+    placemark_95.description = "Место в рейтинге 193";
+    map.addOverlay(placemark_95); 
+    
+    var placemark_96 = new YMaps.Placemark(new YMaps.GeoPoint(37.405826,55.651304));            
+    placemark_96.name = 'ГБОУ ШКОЛА № 1002';
+    placemark_96.description = "Место в рейтинге 193";
+    map.addOverlay(placemark_96); 
+    
+    var placemark_97 = new YMaps.Placemark(new YMaps.GeoPoint(37.402261,55.653007));            
+    placemark_97.name = 'ГБОУ ШКОЛА № 1002';
+    placemark_97.description = "Место в рейтинге 193";
+    map.addOverlay(placemark_97); 
+    
+    var placemark_98 = new YMaps.Placemark(new YMaps.GeoPoint(37.350975,55.641241));            
+    placemark_98.name = 'ГБОУ ШКОЛА № 1018';
+    placemark_98.description = "Место в рейтинге 217";
+    map.addOverlay(placemark_98); 
+    
+    var placemark_99 = new YMaps.Placemark(new YMaps.GeoPoint(37.756988,55.632676));            
+    placemark_99.name = 'ГБОУ ШКОЛА № 1034';
+    placemark_99.description = "Место в рейтинге 178";
+    map.addOverlay(placemark_99); 
+    
+    var placemark_100 = new YMaps.Placemark(new YMaps.GeoPoint(37.759255,55.631572));            
+    placemark_100.name = 'ГБОУ ШКОЛА № 1034';
+    placemark_100.description = "Место в рейтинге 178";
+    map.addOverlay(placemark_100); 
+    
+    var placemark_101 = new YMaps.Placemark(new YMaps.GeoPoint(37.755546,55.635138));            
+    placemark_101.name = 'ГБОУ ШКОЛА № 1034';
+    placemark_101.description = "Место в рейтинге 178";
+    map.addOverlay(placemark_101); 
+    
+    var placemark_102 = new YMaps.Placemark(new YMaps.GeoPoint(37.756244,55.633584));            
+    placemark_102.name = 'ГБОУ ШКОЛА № 1034';
+    placemark_102.description = "Место в рейтинге 178";
+    map.addOverlay(placemark_102); 
+    
+    var placemark_103 = new YMaps.Placemark(new YMaps.GeoPoint(37.407168,55.74558));            
+    placemark_103.name = 'ГБОУ ШКОЛА № 1101';
+    placemark_103.description = "Место в рейтинге 238";
+    map.addOverlay(placemark_103); 
+    
+    var placemark_104 = new YMaps.Placemark(new YMaps.GeoPoint(37.477567,55.633421));            
+    placemark_104.name = 'ГБОУ ШКОЛА № 1101';
+    placemark_104.description = "Место в рейтинге 238";
+    map.addOverlay(placemark_104); 
+    
+    var placemark_105 = new YMaps.Placemark(new YMaps.GeoPoint(37.542278,55.607239));            
+    placemark_105.name = 'ГБОУ ШКОЛА № 1103';
+    placemark_105.description = "Место в рейтинге 268";
+    map.addOverlay(placemark_105); 
+    
+    var placemark_106 = new YMaps.Placemark(new YMaps.GeoPoint(37.154985,55.986367));            
+    placemark_106.name = 'ГБОУ ШКОЛА № 1151';
+    placemark_106.description = "Место в рейтинге 242";
+    map.addOverlay(placemark_106); 
+    
+    var placemark_107 = new YMaps.Placemark(new YMaps.GeoPoint(37.148686,55.987494));            
+    placemark_107.name = 'ГБОУ ШКОЛА № 1151';
+    placemark_107.description = "Место в рейтинге 242";
+    map.addOverlay(placemark_107); 
+    
+    var placemark_108 = new YMaps.Placemark(new YMaps.GeoPoint(37.148686,55.987494));            
+    placemark_108.name = 'ГБОУ ШКОЛА № 1151';
+    placemark_108.description = "Место в рейтинге 242";
+    map.addOverlay(placemark_108); 
+    
+    var placemark_109 = new YMaps.Placemark(new YMaps.GeoPoint(37.15552,55.987268));            
+    placemark_109.name = 'ГБОУ ШКОЛА № 1151';
+    placemark_109.description = "Место в рейтинге 242";
+    map.addOverlay(placemark_109); 
+    
+    var placemark_110 = new YMaps.Placemark(new YMaps.GeoPoint(37.59306,55.631135));            
+    placemark_110.name = 'ГБОУ ШКОЛА № 1158';
+    placemark_110.description = "Место в рейтинге 47";
+    map.addOverlay(placemark_110); 
+    
+    var placemark_111 = new YMaps.Placemark(new YMaps.GeoPoint(37.59522,55.63149));            
+    placemark_111.name = 'ГБОУ ШКОЛА № 1158';
+    placemark_111.description = "Место в рейтинге 47";
+    map.addOverlay(placemark_111); 
+    
+    var placemark_112 = new YMaps.Placemark(new YMaps.GeoPoint(37.596325,55.63506));            
+    placemark_112.name = 'ГБОУ ШКОЛА № 1158';
+    placemark_112.description = "Место в рейтинге 47";
+    map.addOverlay(placemark_112); 
+    
+    var placemark_113 = new YMaps.Placemark(new YMaps.GeoPoint(37.357524,55.850987));            
+    placemark_113.name = 'ГБОУ ШКОЛА № 1191';
+    placemark_113.description = "Место в рейтинге 261";
+    map.addOverlay(placemark_113); 
+    
+    var placemark_114 = new YMaps.Placemark(new YMaps.GeoPoint(37.153703,55.979912));            
+    placemark_114.name = 'ГБОУ ШКОЛА № 1194';
+    placemark_114.description = "Место в рейтинге 142";
+    map.addOverlay(placemark_114); 
+    
+    var placemark_115 = new YMaps.Placemark(new YMaps.GeoPoint(37.157764,55.97995));            
+    placemark_115.name = 'ГБОУ ШКОЛА № 1194';
+    placemark_115.description = "Место в рейтинге 142";
+    map.addOverlay(placemark_115); 
+    
+    var placemark_116 = new YMaps.Placemark(new YMaps.GeoPoint(37.15486,55.979378));            
+    placemark_116.name = 'ГБОУ ШКОЛА № 1194';
+    placemark_116.description = "Место в рейтинге 142";
+    map.addOverlay(placemark_116); 
+    
+    var placemark_117 = new YMaps.Placemark(new YMaps.GeoPoint(37.157925,55.981126));            
+    placemark_117.name = 'ГБОУ ШКОЛА № 1194';
+    placemark_117.description = "Место в рейтинге 142";
+    map.addOverlay(placemark_117); 
+    
+    var placemark_118 = new YMaps.Placemark(new YMaps.GeoPoint(37.415939,55.71633));            
+    placemark_118.name = 'ГБОУ ШКОЛА № 1195';
+    placemark_118.description = "Место в рейтинге 273";
+    map.addOverlay(placemark_118); 
+    
+    var placemark_119 = new YMaps.Placemark(new YMaps.GeoPoint(37.411455,55.721024));            
+    placemark_119.name = 'ГБОУ ШКОЛА № 1400';
+    placemark_119.description = "Место в рейтинге 187";
+    map.addOverlay(placemark_119); 
+    
+    var placemark_120 = new YMaps.Placemark(new YMaps.GeoPoint(37.811057,55.703739));            
+    placemark_120.name = 'ГБОУ ШКОЛА № 1420';
+    placemark_120.description = "Место в рейтинге 101";
+    map.addOverlay(placemark_120); 
+    
+    var placemark_121 = new YMaps.Placemark(new YMaps.GeoPoint(37.814898,55.700983));            
+    placemark_121.name = 'ГБОУ ШКОЛА № 1420';
+    placemark_121.description = "Место в рейтинге 101";
+    map.addOverlay(placemark_121); 
+    
+    var placemark_122 = new YMaps.Placemark(new YMaps.GeoPoint(37.505001,55.539648));            
+    placemark_122.name = 'ГБОУ ШКОЛА № 1492';
+    placemark_122.description = "Место в рейтинге 159";
+    map.addOverlay(placemark_122); 
+    
+    var placemark_123 = new YMaps.Placemark(new YMaps.GeoPoint(37.507804,55.540458));            
+    placemark_123.name = 'ГБОУ ШКОЛА № 1492';
+    placemark_123.description = "Место в рейтинге 159";
+    map.addOverlay(placemark_123); 
+    
+    var placemark_124 = new YMaps.Placemark(new YMaps.GeoPoint(37.595734,55.787712));            
+    placemark_124.name = 'ГБОУ ЛИЦЕЙ № 1501';
+    placemark_124.description = "Место в рейтинге 11";
+    map.addOverlay(placemark_124); 
+    
+    var placemark_125 = new YMaps.Placemark(new YMaps.GeoPoint(37.830349,55.760506));            
+    placemark_125.name = 'ГБОУ ЛИЦЕЙ № 1502 ПРИ МЭИ';
+    placemark_125.description = "Место в рейтинге 14";
+    map.addOverlay(placemark_125); 
+    
+    var placemark_126 = new YMaps.Placemark(new YMaps.GeoPoint(37.702005,55.657537));            
+    placemark_126.name = 'ГБОУ ШКОЛА № 1524';
+    placemark_126.description = "Место в рейтинге 177";
+    map.addOverlay(placemark_126); 
+    
+    var placemark_127 = new YMaps.Placemark(new YMaps.GeoPoint(37.757115,55.673812));            
+    placemark_127.name = 'ГБОУ ШКОЛА № 1524';
+    placemark_127.description = "Место в рейтинге 177";
+    map.addOverlay(placemark_127); 
+    
+    var placemark_128 = new YMaps.Placemark(new YMaps.GeoPoint(37.719448,55.69));            
+    placemark_128.name = 'ГБОУ ШКОЛА № 1524';
+    placemark_128.description = "Место в рейтинге 177";
+    map.addOverlay(placemark_128); 
+    
+    var placemark_129 = new YMaps.Placemark(new YMaps.GeoPoint(37.720004,55.690865));            
+    placemark_129.name = 'ГБОУ ШКОЛА № 1524';
+    placemark_129.description = "Место в рейтинге 177";
+    map.addOverlay(placemark_129); 
+    
+    var placemark_130 = new YMaps.Placemark(new YMaps.GeoPoint(37.555175,55.702928));            
+    placemark_130.name = 'ГБОУ ШКОЛА № 1525';
+    placemark_130.description = "Место в рейтинге 278";
+    map.addOverlay(placemark_130); 
+    
+    var placemark_131 = new YMaps.Placemark(new YMaps.GeoPoint(37.55282,55.702144));            
+    placemark_131.name = 'ГБОУ ШКОЛА № 1525';
+    placemark_131.description = "Место в рейтинге 278";
+    map.addOverlay(placemark_131); 
+    
+    var placemark_132 = new YMaps.Placemark(new YMaps.GeoPoint(37.555175,55.702928));            
+    placemark_132.name = 'ГБОУ ШКОЛА № 1525';
+    placemark_132.description = "Место в рейтинге 278";
+    map.addOverlay(placemark_132); 
+    
+    var placemark_133 = new YMaps.Placemark(new YMaps.GeoPoint(37.554346,55.702554));            
+    placemark_133.name = 'ГБОУ ШКОЛА № 1525';
+    placemark_133.description = "Место в рейтинге 278";
+    map.addOverlay(placemark_133); 
+    
+    var placemark_134 = new YMaps.Placemark(new YMaps.GeoPoint(37.553572,55.70229));            
+    placemark_134.name = 'ГБОУ ШКОЛА № 1525';
+    placemark_134.description = "Место в рейтинге 278";
+    map.addOverlay(placemark_134); 
+    
+    var placemark_135 = new YMaps.Placemark(new YMaps.GeoPoint(37.555832,55.704718));            
+    placemark_135.name = 'ГБОУ ШКОЛА № 1525';
+    placemark_135.description = "Место в рейтинге 278";
+    map.addOverlay(placemark_135); 
+    
+    var placemark_136 = new YMaps.Placemark(new YMaps.GeoPoint(37.540713,55.692515));            
+    placemark_136.name = '"ГБОУ ШКОЛА № 1533 ""ЛИТ"""';
+    placemark_136.description = "Место в рейтинге 73";
+    map.addOverlay(placemark_136); 
+    
+    var placemark_137 = new YMaps.Placemark(new YMaps.GeoPoint(37.543757,55.692293));            
+    placemark_137.name = '"ГБОУ ШКОЛА № 1533 ""ЛИТ"""';
+    placemark_137.description = "Место в рейтинге 73";
+    map.addOverlay(placemark_137); 
+    
+    var placemark_138 = new YMaps.Placemark(new YMaps.GeoPoint(37.561972,55.731007));            
+    placemark_138.name = 'ГБОУ ЛИЦЕЙ № 1535';
+    placemark_138.description = "Место в рейтинге 2";
+    map.addOverlay(placemark_138); 
+    
+    var placemark_139 = new YMaps.Placemark(new YMaps.GeoPoint(37.564869,55.726086));            
+    placemark_139.name = 'ГБОУ ЛИЦЕЙ № 1535';
+    placemark_139.description = "Место в рейтинге 2";
+    map.addOverlay(placemark_139); 
+    
+    var placemark_140 = new YMaps.Placemark(new YMaps.GeoPoint(37.719088,55.874383));            
+    placemark_140.name = 'ГБОУ ШКОЛА № 1537';
+    placemark_140.description = "Место в рейтинге 136";
+    map.addOverlay(placemark_140); 
+    
+    var placemark_141 = new YMaps.Placemark(new YMaps.GeoPoint(37.7769,55.662154));            
+    placemark_141.name = 'ГБОУ ШКОЛА № 1547';
+    placemark_141.description = "Место в рейтинге 23";
+    map.addOverlay(placemark_141); 
+    
+    var placemark_142 = new YMaps.Placemark(new YMaps.GeoPoint(37.649058,55.720986));            
+    placemark_142.name = 'ГБОУ ШКОЛА № 1553 ИМЕНИ В.И. ВЕРНАДСКОГО';
+    placemark_142.description = "Место в рейтинге 116";
+    map.addOverlay(placemark_142); 
+    
+    var placemark_143 = new YMaps.Placemark(new YMaps.GeoPoint(37.231727,55.998123));            
+    placemark_143.name = 'ГБОУ ШКОЛА № 1557';
+    placemark_143.description = "Место в рейтинге 26";
+    map.addOverlay(placemark_143); 
+    
+    var placemark_144 = new YMaps.Placemark(new YMaps.GeoPoint(37.255401,55.989999));            
+    placemark_144.name = 'ГБОУ ШКОЛА № 1557';
+    placemark_144.description = "Место в рейтинге 26";
+    map.addOverlay(placemark_144); 
+    
+    var placemark_145 = new YMaps.Placemark(new YMaps.GeoPoint(37.235702,55.999254));            
+    placemark_145.name = 'ГБОУ ШКОЛА № 1557';
+    placemark_145.description = "Место в рейтинге 26";
+    map.addOverlay(placemark_145); 
+    
+    var placemark_146 = new YMaps.Placemark(new YMaps.GeoPoint(37.221629,55.996451));            
+    placemark_146.name = 'ГБОУ ШКОЛА № 1557';
+    placemark_146.description = "Место в рейтинге 26";
+    map.addOverlay(placemark_146); 
+    
+    var placemark_147 = new YMaps.Placemark(new YMaps.GeoPoint(37.230033,55.998625));            
+    placemark_147.name = 'ГБОУ ШКОЛА № 1557';
+    placemark_147.description = "Место в рейтинге 26";
+    map.addOverlay(placemark_147); 
+    
+    var placemark_148 = new YMaps.Placemark(new YMaps.GeoPoint(37.224053,55.99409));            
+    placemark_148.name = 'ГБОУ ШКОЛА № 1557';
+    placemark_148.description = "Место в рейтинге 26";
+    map.addOverlay(placemark_148); 
+    
+    var placemark_149 = new YMaps.Placemark(new YMaps.GeoPoint(37.222124,55.994292));            
+    placemark_149.name = 'ГБОУ ШКОЛА № 1557';
+    placemark_149.description = "Место в рейтинге 26";
+    map.addOverlay(placemark_149); 
+    
+    var placemark_150 = new YMaps.Placemark(new YMaps.GeoPoint(37.483937,55.780362));            
+    placemark_150.name = 'ГБОУ ШКОЛА № 1560';
+    placemark_150.description = "Место в рейтинге 96";
+    map.addOverlay(placemark_150); 
+    
+    var placemark_151 = new YMaps.Placemark(new YMaps.GeoPoint(37.54374,55.601957));            
+    placemark_151.name = 'ГБОУ ШКОЛА № 1561';
+    placemark_151.description = "Место в рейтинге 129";
+    map.addOverlay(placemark_151); 
+    
+    var placemark_152 = new YMaps.Placemark(new YMaps.GeoPoint(37.35319,55.83343));            
+    placemark_152.name = 'ГБОУ ЛИЦЕЙ № 1564';
+    placemark_152.description = "Место в рейтинге 106";
+    map.addOverlay(placemark_152); 
+    
+    var placemark_153 = new YMaps.Placemark(new YMaps.GeoPoint(37.354046,55.83216));            
+    placemark_153.name = 'ГБОУ ЛИЦЕЙ № 1564';
+    placemark_153.description = "Место в рейтинге 106";
+    map.addOverlay(placemark_153); 
+    
+    var placemark_154 = new YMaps.Placemark(new YMaps.GeoPoint(37.360511,55.830274));            
+    placemark_154.name = 'ГБОУ ЛИЦЕЙ № 1564';
+    placemark_154.description = "Место в рейтинге 106";
+    map.addOverlay(placemark_154); 
+    
+    var placemark_155 = new YMaps.Placemark(new YMaps.GeoPoint(37.359622,55.829357));            
+    placemark_155.name = 'ГБОУ ЛИЦЕЙ № 1564';
+    placemark_155.description = "Место в рейтинге 106";
+    map.addOverlay(placemark_155); 
+    
+    var placemark_156 = new YMaps.Placemark(new YMaps.GeoPoint(37.642875,55.87454));            
+    placemark_156.name = 'ГБОУ ШКОЛА № 1568';
+    placemark_156.description = "Место в рейтинге 9";
+    map.addOverlay(placemark_156); 
+    
+    var placemark_157 = new YMaps.Placemark(new YMaps.GeoPoint(37.44304,55.861005));            
+    placemark_157.name = 'ГБОУ ЛИЦЕЙ № 1571';
+    placemark_157.description = "Место в рейтинге 37";
+    map.addOverlay(placemark_157); 
+    
+    var placemark_158 = new YMaps.Placemark(new YMaps.GeoPoint(37.444173,55.864583));            
+    placemark_158.name = 'ГБОУ ЛИЦЕЙ № 1571';
+    placemark_158.description = "Место в рейтинге 37";
+    map.addOverlay(placemark_158); 
+    
+    var placemark_159 = new YMaps.Placemark(new YMaps.GeoPoint(37.440873,55.854644));            
+    placemark_159.name = 'ГБОУ ЛИЦЕЙ № 1571';
+    placemark_159.description = "Место в рейтинге 37";
+    map.addOverlay(placemark_159); 
+    
+    var placemark_160 = new YMaps.Placemark(new YMaps.GeoPoint(37.441841,55.862819));            
+    placemark_160.name = 'ГБОУ ЛИЦЕЙ № 1571';
+    placemark_160.description = "Место в рейтинге 37";
+    map.addOverlay(placemark_160); 
+    
+    var placemark_161 = new YMaps.Placemark(new YMaps.GeoPoint(37.446775,55.857583));            
+    placemark_161.name = 'ГБОУ ЛИЦЕЙ № 1571';
+    placemark_161.description = "Место в рейтинге 37";
+    map.addOverlay(placemark_161); 
+    
+    var placemark_162 = new YMaps.Placemark(new YMaps.GeoPoint(37.442863,55.854477));            
+    placemark_162.name = 'ГБОУ ЛИЦЕЙ № 1571';
+    placemark_162.description = "Место в рейтинге 37";
+    map.addOverlay(placemark_162); 
+    
+    var placemark_163 = new YMaps.Placemark(new YMaps.GeoPoint(37.596941,55.779798));            
+    placemark_163.name = 'ГБОУ ЛИЦЕЙ № 1574';
+    placemark_163.description = "Место в рейтинге 64";
+    map.addOverlay(placemark_163); 
+    
+    var placemark_164 = new YMaps.Placemark(new YMaps.GeoPoint(37.531974,55.804971));            
+    placemark_164.name = 'ГБОУ ШКОЛА № 1575';
+    placemark_164.description = "Место в рейтинге 140";
+    map.addOverlay(placemark_164); 
+    
+    var placemark_165 = new YMaps.Placemark(new YMaps.GeoPoint(37.612885,55.642603));            
+    placemark_165.name = 'ГБОУ ЛИЦЕЙ № 1580';
+    placemark_165.description = "Место в рейтинге 5";
+    map.addOverlay(placemark_165); 
+    
+    var placemark_166 = new YMaps.Placemark(new YMaps.GeoPoint(37.613038,55.641641));            
+    placemark_166.name = 'ГБОУ ЛИЦЕЙ № 1580';
+    placemark_166.description = "Место в рейтинге 5";
+    map.addOverlay(placemark_166); 
+    
+    var placemark_167 = new YMaps.Placemark(new YMaps.GeoPoint(37.66296,55.752711));            
+    placemark_167.name = 'ГБОУ ИНЖЕНЕРНАЯ ШКОЛА № 1581';
+    placemark_167.description = "Место в рейтинге 118";
+    map.addOverlay(placemark_167); 
+    
+    var placemark_168 = new YMaps.Placemark(new YMaps.GeoPoint(37.829541,55.824675));            
+    placemark_168.name = 'ГБОУ ШКОЛА № 1598';
+    placemark_168.description = "Место в рейтинге 124";
+    map.addOverlay(placemark_168); 
+    
+    var placemark_169 = new YMaps.Placemark(new YMaps.GeoPoint(37.829177,55.819328));            
+    placemark_169.name = 'ГБОУ ШКОЛА № 1598';
+    placemark_169.description = "Место в рейтинге 124";
+    map.addOverlay(placemark_169); 
+    
+    var placemark_170 = new YMaps.Placemark(new YMaps.GeoPoint(37.352305,55.846258));            
+    placemark_170.name = 'ГБОУ ШКОЛА № 1747';
+    placemark_170.description = "Место в рейтинге 219";
+    map.addOverlay(placemark_170); 
+    
+    var placemark_171 = new YMaps.Placemark(new YMaps.GeoPoint(37.548231,55.549062));            
+    placemark_171.name = '"ГБОУ ШКОЛА № 1883 ""БУТОВО"""';
+    placemark_171.description = "Место в рейтинге 221";
+    map.addOverlay(placemark_171); 
+    
+    var placemark_172 = new YMaps.Placemark(new YMaps.GeoPoint(37.547163,55.549496));            
+    placemark_172.name = '"ГБОУ ШКОЛА № 1883 ""БУТОВО"""';
+    placemark_172.description = "Место в рейтинге 221";
+    map.addOverlay(placemark_172); 
+    
+    var placemark_173 = new YMaps.Placemark(new YMaps.GeoPoint(37.528811,55.532462));            
+    placemark_173.name = 'ГБОУ ШКОЛА № 1980';
+    placemark_173.description = "Место в рейтинге 53";
+    map.addOverlay(placemark_173); 
+    
+    var placemark_174 = new YMaps.Placemark(new YMaps.GeoPoint(37.530068,55.549346));            
+    placemark_174.name = 'ГБОУ ШКОЛА № 1981';
+    placemark_174.description = "Место в рейтинге 200";
+    map.addOverlay(placemark_174); 
+    
+    var placemark_175 = new YMaps.Placemark(new YMaps.GeoPoint(37.397645,55.894462));            
+    placemark_175.name = 'ГБОУ ШКОЛА № 2005';
+    placemark_175.description = "Место в рейтинге 207";
+    map.addOverlay(placemark_175); 
+    
+    var placemark_176 = new YMaps.Placemark(new YMaps.GeoPoint(37.395543,55.894208));            
+    placemark_176.name = 'ГБОУ ШКОЛА № 2005';
+    placemark_176.description = "Место в рейтинге 207";
+    map.addOverlay(placemark_176); 
+    
+    var placemark_177 = new YMaps.Placemark(new YMaps.GeoPoint(37.398683,55.89565));            
+    placemark_177.name = 'ГБОУ ШКОЛА № 2005';
+    placemark_177.description = "Место в рейтинге 207";
+    map.addOverlay(placemark_177); 
+    
+    var placemark_178 = new YMaps.Placemark(new YMaps.GeoPoint(37.392278,55.897568));            
+    placemark_178.name = 'ГБОУ ШКОЛА № 2005';
+    placemark_178.description = "Место в рейтинге 207";
+    map.addOverlay(placemark_178); 
+    
+    var placemark_179 = new YMaps.Placemark(new YMaps.GeoPoint(37.519303,55.540703));            
+    placemark_179.name = 'ГБОУ ШКОЛА № 2009';
+    placemark_179.description = "Место в рейтинге 56";
+    map.addOverlay(placemark_179); 
+    
+    var placemark_180 = new YMaps.Placemark(new YMaps.GeoPoint(37.446002,55.677486));            
+    placemark_180.name = 'ГБОУ ШКОЛА № 2025';
+    placemark_180.description = "Место в рейтинге 158";
+    map.addOverlay(placemark_180); 
+    
+    var placemark_181 = new YMaps.Placemark(new YMaps.GeoPoint(37.883665,55.717574));            
+    placemark_181.name = 'ГБОУ ШКОЛА № 2026';
+    placemark_181.description = "Место в рейтинге 65";
+    map.addOverlay(placemark_181); 
+    
+    var placemark_182 = new YMaps.Placemark(new YMaps.GeoPoint(37.555797,55.760036));            
+    placemark_182.name = 'ГБОУ ШКОЛА № 2030';
+    placemark_182.description = "Место в рейтинге 215";
+    map.addOverlay(placemark_182); 
+    
+    var placemark_183 = new YMaps.Placemark(new YMaps.GeoPoint(37.890878,55.71011));            
+    placemark_183.name = 'ГБОУ ШКОЛА № 2031';
+    placemark_183.description = "Место в рейтинге 174";
+    map.addOverlay(placemark_183); 
+    
+    var placemark_184 = new YMaps.Placemark(new YMaps.GeoPoint(37.779592,55.808077));            
+    placemark_184.name = 'ГБОУ ШКОЛА № 2033';
+    placemark_184.description = "Место в рейтинге 203";
+    map.addOverlay(placemark_184); 
+    
+    var placemark_185 = new YMaps.Placemark(new YMaps.GeoPoint(37.887088,55.71034));            
+    placemark_185.name = 'ГБОУ ШКОЛА № 2036';
+    placemark_185.description = "Место в рейтинге 88";
+    map.addOverlay(placemark_185); 
+    
+    var placemark_186 = new YMaps.Placemark(new YMaps.GeoPoint(37.152296,55.98781));            
+    placemark_186.name = 'ГБОУ ШКОЛА № 2045';
+    placemark_186.description = "Место в рейтинге 256";
+    map.addOverlay(placemark_186); 
+    
+    var placemark_187 = new YMaps.Placemark(new YMaps.GeoPoint(37.171851,55.973754));            
+    placemark_187.name = 'ГБОУ ШКОЛА № 2045';
+    placemark_187.description = "Место в рейтинге 256";
+    map.addOverlay(placemark_187); 
+    
+    var placemark_188 = new YMaps.Placemark(new YMaps.GeoPoint(37.170351,55.973372));            
+    placemark_188.name = 'ГБОУ ШКОЛА № 2045';
+    placemark_188.description = "Место в рейтинге 256";
+    map.addOverlay(placemark_188); 
+    
+    var placemark_189 = new YMaps.Placemark(new YMaps.GeoPoint(37.192609,55.996199));            
+    placemark_189.name = 'ГБОУ ШКОЛА № 2045';
+    placemark_189.description = "Место в рейтинге 256";
+    map.addOverlay(placemark_189); 
+    
+    var placemark_190 = new YMaps.Placemark(new YMaps.GeoPoint(37.166173,55.978494));            
+    placemark_190.name = 'ГБОУ ШКОЛА № 2045';
+    placemark_190.description = "Место в рейтинге 256";
+    map.addOverlay(placemark_190); 
+    
+    var placemark_191 = new YMaps.Placemark(new YMaps.GeoPoint(37.154973,55.975196));            
+    placemark_191.name = 'ГБОУ ШКОЛА № 2045';
+    placemark_191.description = "Место в рейтинге 256";
+    map.addOverlay(placemark_191); 
+    
+    var placemark_192 = new YMaps.Placemark(new YMaps.GeoPoint(37.624742,55.772294));            
+    placemark_192.name = 'ГБОУ ШКОЛА № 2054';
+    placemark_192.description = "Место в рейтинге 48";
+    map.addOverlay(placemark_192); 
+    
+    var placemark_193 = new YMaps.Placemark(new YMaps.GeoPoint(37.625458,55.768782));            
+    placemark_193.name = 'ГБОУ ШКОЛА № 2054';
+    placemark_193.description = "Место в рейтинге 48";
+    map.addOverlay(placemark_193); 
+    
+    var placemark_194 = new YMaps.Placemark(new YMaps.GeoPoint(37.626019,55.772429));            
+    placemark_194.name = 'ГБОУ ШКОЛА № 2054';
+    placemark_194.description = "Место в рейтинге 48";
+    map.addOverlay(placemark_194); 
+    
+    var placemark_195 = new YMaps.Placemark(new YMaps.GeoPoint(37.626976,55.772365));            
+    placemark_195.name = 'ГБОУ ШКОЛА № 2054';
+    placemark_195.description = "Место в рейтинге 48";
+    map.addOverlay(placemark_195); 
+    
+    var placemark_196 = new YMaps.Placemark(new YMaps.GeoPoint(37.372211,55.592575));            
+    placemark_196.name = 'ГБОУ ШКОЛА № 2065';
+    placemark_196.description = "Место в рейтинге 239";
+    map.addOverlay(placemark_196); 
+    
+    var placemark_197 = new YMaps.Placemark(new YMaps.GeoPoint(37.720933,55.781389));            
+    placemark_197.name = 'ГБОУ ШКОЛА № 2070';
+    placemark_197.description = "Место в рейтинге 63";
+    map.addOverlay(placemark_197); 
+    
+    var placemark_198 = new YMaps.Placemark(new YMaps.GeoPoint(37.792227,55.746448));            
+    placemark_198.name = 'ГБОУ ШКОЛА № 2072';
+    placemark_198.description = "Место в рейтинге 286";
+    map.addOverlay(placemark_198); 
+    
+    var placemark_199 = new YMaps.Placemark(new YMaps.GeoPoint(37.792691,55.7476));            
+    placemark_199.name = 'ГБОУ ШКОЛА № 2072';
+    placemark_199.description = "Место в рейтинге 286";
+    map.addOverlay(placemark_199); 
+    
+    var placemark_200 = new YMaps.Placemark(new YMaps.GeoPoint(37.54082,55.469187));            
+    placemark_200.name = 'ГБОУ ШКОЛА № 2083';
+    placemark_200.description = "Место в рейтинге 114";
+    map.addOverlay(placemark_200); 
+    
+            
+        })
+    </script>
+</head>
+
+<body>
+    <center><div id="YMapsID" style="width:800px;height:600px"></div></center>
+</body>
+
+</html>

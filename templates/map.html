@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Примеры. Простой вызов карты.</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
+    <script type="text/javascript">
+        // Создает обработчик события window.onLoad
+        YMaps.jQuery(function () {
+            // Создает экземпляр карты и привязывает его к созданному контейнеру
+            var map = new YMaps.Map(YMaps.jQuery("#YMapsID")[0]);
+            
+            // Устанавливает начальные параметры отображения карты: центр карты и коэффициент масштабирования
+            map.setCenter(new YMaps.GeoPoint(37.64, 55.76), 10);
+            map.addControl(new YMaps.Zoom());            
+            map.addControl(new YMaps.ToolBar());
+            
+            map.openBalloon(new YMaps.GeoPoint(37.64, 55.76), "Москва");
+            
+            var placemark = new YMaps.Placemark(new YMaps.GeoPoint(37.744656,55.701004));            
+            placemark.name = "Школа 654";
+            placemark.description = "Рейтинг 39";
+            map.addOverlay(placemark); 
+            
+        })
+    </script>
+</head>
+
+<body>
+    <div id="YMapsID" style="width:600px;height:400px"></div>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+
+We use open data from Russian site http://data.gov.ru
+
+It is distributed under it's own license http://data.gov.ru/information-usage
+Also copied to file license_ru.pdf in this repository.
+
+Basically you can do anything with it. 
+Main points are:
+III.10.2 You must give reference to source of data.
+III.10.3 You must present it in authentic form.
