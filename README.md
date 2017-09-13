@@ -1,4 +1,5 @@
 # Рейтинг школ на карте
+[Рейтинг школ на карте Москвы](https://storage.googleapis.com/school-map/Moscow.html)
 
 
 # russian-schools-on-map
