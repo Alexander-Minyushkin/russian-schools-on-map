@@ -1,5 +1,6 @@
 data-20130909T0800.csv http://data.gov.ru/opendata/7710489036-srednyaya-obrazovatelnaya-shkola
 data-20131031T1206-structure-20131031T1206.csv http://data.gov.ru/opendata/7710489036-litsej
+data-20131031T1325-structure-20131031T1325.csv http://data.gov.ru/opendata/538-gimnazija
 
 
 http://data.gov.ru/opendata/7710489036-shkoly-internaty-s-uglublennym-izucheniem-otdelnykh-predmetov

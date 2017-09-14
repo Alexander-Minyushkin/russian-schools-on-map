@@ -26,18 +26,25 @@ rating = raw_rating.set_index('number')
 
 #rating = rating[rating.rating < 50]
 
+def extract_numbers_and_coords(path, sep):
+    raw_schools = pd.read_csv(path, sep=sep)
+    raw_schools['number'] = raw_schools['name'].apply(get_school_number)
+    return raw_schools[['number','X','Y']].set_index('number')
+    
 # schools
-raw_schools = pd.read_csv('./data/data-20130909T0800.csv', sep=';')
-raw_schools['number'] = raw_schools['name'].apply(get_school_number)
-schools = raw_schools[['number','X','Y']].set_index('number')
+schools = extract_numbers_and_coords('./data/data-20130909T0800.csv', sep=';')
 
 # liceums
-raw_schools = pd.read_csv('./data/data-20131031T1206-structure-20131031T1206.csv', 
-                          sep=',')
-raw_schools['number'] = raw_schools['name'].apply(get_school_number)
-liceums = raw_schools[['number','X','Y']].set_index('number')
+liceums = extract_numbers_and_coords(
+        './data/data-20131031T1206-structure-20131031T1206.csv', 
+        sep=',')
 
-all_schools = pd.concat([schools, liceums], axis = 0)
+
+gimnasiums = extract_numbers_and_coords(
+        './data/data-20131031T1325-structure-20131031T1325.csv', 
+        sep=',')
+
+all_schools = pd.concat([schools, liceums, gimnasiums], axis = 0)
 
 tidy = pd.merge(left = rating.iloc[rating.index != 0],
                 right = all_schools.iloc[all_schools.index != 0][['X', 'Y']],
@@ -55,8 +62,8 @@ for index, row in tidy.iterrows():
     
     res = """
     var {0} = new YMaps.Placemark(new YMaps.GeoPoint({1},{2}));            
-    {0}.name = '{3}';
-    {0}.description = "Место в рейтинге {4}";
+    {0}.name = "Место в рейтинге {4}";
+    {0}.description = '{3}';
     map.addOverlay({0}); 
     """.format(var_name, row['X'].replace(',','.'), row['Y'].replace(',','.'), 
     row['school'].strip(), int(row['rating']))
