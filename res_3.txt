@@ -1,22 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Примеры. Балун и хинт</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <!-- Если вы используете API локально, то в URL ресурса необходимо указывать протокол в стандартном виде (http://...)-->
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-    <script type="text/javascript">
-    ymaps.ready(init);
 
-    function init () {
-        var myMap = new ymaps.Map("map", {
-                center: [55.76, 37.64],
-                zoom: 10
-            }, {
-                searchControlProvider: 'yandex#search'
-            }),
-        
- 
     placemark_1 = new ymaps.Placemark([55.713181, 37.4818], {
                 balloonContentHeader: 'ГБПОУ 1-Й МОК',
                 balloonContentBody: 'Место в <a href=\"https://www.mos.ru/dogm/function/ratings-vklada-school/ratings-2016-2017/\">рейтинге</a> 31',
@@ -2320,29 +2302,4 @@
                 hintContent: 'Место в рейтинге 286',
                 iconContent: '286'
             });
-        myMap.geoObjects.add(placemark_288);       
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    }
-    
-    
-    
-    
-    </script>
-	<style>
-        html, body, #map {
-            width: 100%; height: 100%; padding: 0; margin: 0;
-        }
-    </style>
-</head>
-<body>
-<div id="map"></div>
-</body>
-</html>
+        myMap.geoObjects.add(placemark_288);

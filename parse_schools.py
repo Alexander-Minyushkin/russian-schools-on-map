@@ -53,22 +53,62 @@ tidy = pd.merge(left = rating.iloc[rating.index != 0],
                 right_index=True)
 
 
-i=0
-res_file = open("res.txt", 'w')
+# ЕГЭ 205-2016
 
-for index, row in tidy.iterrows():
+ege_rating = pd.read_csv('./data/data-9722-2016-10-31.csv', sep=';')
+ege_rating['number'] = ege_rating['EDU_NAME'].apply(get_school_number)
+ege_rating = ege_rating.set_index('number')
+
+tidy2 = pd.merge(left = tidy,
+                right = ege_rating.iloc[ege_rating.index != 0][['PASSED_NUMBER_FULL', 'PASSES_OVER_220', 'PASSER_UNDER_160']],
+                how='inner', 
+                left_index=True,
+                right_index=True)
+
+import matplotlib.pyplot as plt
+
+plt.scatter(tidy2['rating'], tidy2['PASSES_OVER_220']/tidy2['PASSED_NUMBER_FULL'] * 100)
+
+plt.scatter((tidy2['PASSED_NUMBER_FULL'] - tidy2['PASSER_UNDER_160'])/tidy2['PASSED_NUMBER_FULL'] * 100, 
+            tidy2['PASSES_OVER_220']/tidy2['PASSED_NUMBER_FULL'] * 100)
+
+
+plt.scatter((tidy2['PASSER_UNDER_160'] - tidy2['PASSES_OVER_220'])/tidy2['PASSED_NUMBER_FULL'] * 100, 
+            tidy2['PASSES_OVER_220']/tidy2['PASSED_NUMBER_FULL'] * 100)
+
+
+
+i=0
+res_file = open("res_3.txt", 'w')
+
+for index, row in tidy2.iterrows():
     i = i+1          
     var_name = 'placemark_{0}'.format(i)
     
     res = """
-    var {0} = new YMaps.Placemark(new YMaps.GeoPoint({1},{2}));            
-    {0}.name = "Место в рейтинге {4}";
-    {0}.description = '{3}';
-    map.addOverlay({0}); 
-    """.format(var_name, row['X'].replace(',','.'), row['Y'].replace(',','.'), 
-    row['school'].strip(), int(row['rating']))
+    {0} = new ymaps.Placemark([{2}, {1}], {{
+                balloonContentHeader: '{3}',
+                balloonContentBody: 'Место в <a href=\\"https://www.mos.ru/dogm/function/ratings-vklada-school/ratings-2016-2017/\\">рейтинге</a> {4}',
+                balloonContentFooter: 'Доля  <a href=\\"https://data.mos.ru/opendata/7719028495-rezultaty-ege-dogm\\">ЕГЭ 220+</a>: {5}%.<br>Доля  <a href=\\"https://data.mos.ru/opendata/7719028495-rezultaty-ege-dogm\\">ЕГЭ 160-</a>: {6}%',
+                hintContent: 'Место в рейтинге {4}',
+                iconContent: '{4}'
+            }});
+        myMap.geoObjects.add({0});""".format(var_name, 
+        row['X'].replace(',','.'), 
+        row['Y'].replace(',','.'), 
+        row['school'].strip().replace('"', ''), 
+        int(row['rating']),
+        int(float(row['PASSES_OVER_220'])/row['PASSED_NUMBER_FULL'] * 100),
+        int(float(row['PASSED_NUMBER_FULL'] - row['PASSER_UNDER_160'])/row['PASSED_NUMBER_FULL'] * 100)
+        )
            
     res_file.write(res)
     #print row['rating'], row['school']
 
 res_file.close()
+
+#####
+
+
+
+
