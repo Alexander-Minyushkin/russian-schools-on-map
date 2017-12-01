@@ -65,16 +65,24 @@ tidy2 = pd.merge(left = tidy,
                 left_index=True,
                 right_index=True)
 
+tidy2.rename(columns={'PASSER_UNDER_160':'PASSES_OVER_160'},inplace=True)
+tidy2['school'] = tidy2['school'].apply(lambda s: s.strip().replace('"', ''))
+tidy2['X'] = tidy2['X'].apply(lambda s: float(s.replace(',','.')))
+tidy2['Y'] = tidy2['Y'].apply(lambda s: float(s.replace(',','.')))
+
+
+
 import matplotlib.pyplot as plt
 
 plt.scatter(tidy2['rating'], tidy2['PASSES_OVER_220']/tidy2['PASSED_NUMBER_FULL'] * 100)
 
-plt.scatter((tidy2['PASSED_NUMBER_FULL'] - tidy2['PASSER_UNDER_160'])/tidy2['PASSED_NUMBER_FULL'] * 100, 
+plt.scatter((tidy2['PASSED_NUMBER_FULL'] - tidy2['PASSES_OVER_160'])/tidy2['PASSED_NUMBER_FULL'] * 100, 
             tidy2['PASSES_OVER_220']/tidy2['PASSED_NUMBER_FULL'] * 100)
 
 
-plt.scatter((tidy2['PASSER_UNDER_160'] - tidy2['PASSES_OVER_220'])/tidy2['PASSED_NUMBER_FULL'] * 100, 
+plt.scatter((tidy2['PASSES_OVER_160'] - tidy2['PASSES_OVER_220'])/tidy2['PASSED_NUMBER_FULL'] * 100, 
             tidy2['PASSES_OVER_220']/tidy2['PASSED_NUMBER_FULL'] * 100)
+
 
 
 
@@ -94,12 +102,12 @@ for index, row in tidy2.iterrows():
                 iconContent: '{4}'
             }});
         myMap.geoObjects.add({0});""".format(var_name, 
-        row['X'].replace(',','.'), 
-        row['Y'].replace(',','.'), 
-        row['school'].strip().replace('"', ''), 
+        row['X'], 
+        row['Y'], 
+        row['school'], 
         int(row['rating']),
         int(float(row['PASSES_OVER_220'])/row['PASSED_NUMBER_FULL'] * 100),
-        int(float(row['PASSED_NUMBER_FULL'] - row['PASSER_UNDER_160'])/row['PASSED_NUMBER_FULL'] * 100)
+        int(float(row['PASSED_NUMBER_FULL'] - row['PASSES_OVER_160'])/row['PASSED_NUMBER_FULL'] * 100)
         )
            
     res_file.write(res)
@@ -107,6 +115,8 @@ for index, row in tidy2.iterrows():
 
 res_file.close()
 
+
+tidy2.to_csv('export/Moscow.csv', encoding='utf-8', index=False)
 #####
 
 

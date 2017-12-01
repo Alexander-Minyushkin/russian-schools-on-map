@@ -1,6 +1,9 @@
 
 
-res.txt 
+res*.txt 
+
+# GCP Credentials
+school-rating-a7b3207130b5.json
 
 # Created by https://www.gitignore.io/api/python
 
