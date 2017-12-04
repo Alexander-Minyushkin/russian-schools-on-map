@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Copyright 2016 Google Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,12 +18,41 @@ import logging
 
 # [START imports]
 from flask import Flask, render_template, request
+from google.cloud import bigquery
 # [END imports]
 
 # [START create_app]
 app = Flask(__name__)
 # [END create_app]
 
+
+@app.route('/')
+def index():
+    
+    baloons_list = """
+        placemark_1 = new ymaps.Placemark([55.713181, 37.4818], {
+                balloonContentHeader: \'ГБПОУ 1-Й МОК\',
+                balloonContentBody: \'Место в <a href=\"https://www.mos.ru/dogm/function/ratings-vklada-school/ratings-2016-2017/\">рейтинге</a> 31\',
+                balloonContentFooter: \'Доля  <a href=\"https://data.mos.ru/opendata/7719028495-rezultaty-ege-dogm\">ЕГЭ 220+</a>: 20%.<br>Доля  <a href=\"https://data.mos.ru/opendata/7719028495-rezultaty-ege-dogm\">ЕГЭ 160-</a>: 25%\',
+                hintContent: \'Место в рейтинге 31\',
+                iconContent: \'31\'
+            });
+        myMap.geoObjects.add(placemark_1);
+    """.decode('utf8')
+    
+ #   client = bigquery.Client()    
+ #   query_job = client.query("SELECT rating FROM plane_ratings.Moscow")
+    
+#    results = query_job.result(timeout=100)  # Waits for job to complete.
+    
+#    out = ""
+#    for row in results:
+#        out = out + "\n{}: ".format(row.rating)
+    
+#    return out
+    
+    return render_template('map.html',
+                           all_baloons = "").replace("&#39;", "'")
 
 # [START form]
 @app.route('/form')

@@ -1,1 +1,5 @@
+#-e git://github.com/shazow/urllib3.git#egg=urllib3
 Flask==0.12.2
+google-cloud-bigquery==0.28.0
+google-auth-oauthlib==0.2.0
+pytz==2017.3
