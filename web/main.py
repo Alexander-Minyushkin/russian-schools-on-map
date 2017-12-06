@@ -40,19 +40,18 @@ def index():
         myMap.geoObjects.add(placemark_1);
     """.decode('utf8')
     
- #   client = bigquery.Client()    
- #   query_job = client.query("SELECT rating FROM plane_ratings.Moscow")
+    client = bigquery.Client()    
+    query_job = client.query("SELECT * FROM plane_ratings.Moscow")
     
-#    results = query_job.result(timeout=100)  # Waits for job to complete.
+    schools = query_job.result()  # Waits for job to complete.
     
 #    out = ""
 #    for row in results:
 #        out = out + "\n{}: ".format(row.rating)
-    
 #    return out
     
     return render_template('map.html',
-                           all_baloons = "").replace("&#39;", "'")
+                           schools = list(enumerate(schools)))
 
 # [START form]
 @app.route('/form')

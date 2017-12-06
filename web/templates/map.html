@@ -17,7 +17,18 @@
             }),
         
    
-    {{ all_baloons }}
+  {% for (index, row) in schools %}
+            placemark_{{index}} = new ymaps.Placemark([{{row.Y}}, {{row.X}}], {
+                balloonContentHeader: '{{row.school}}',
+                balloonContentBody: 'Место в <a href=\"https://www.mos.ru/dogm/function/ratings-vklada-school/ratings-2016-2017/\">рейтинге</a> {{row.rating}}',
+                balloonContentFooter: 'Доля  <a href=\"https://data.mos.ru/opendata/7719028495-rezultaty-ege-dogm\">ЕГЭ 220+</a>: {{row.PASSES_OVER_220}}%.<br>Доля  <a href=\"https://data.mos.ru/opendata/7719028495-rezultaty-ege-dogm\">ЕГЭ 160-</a>: {{row.PASSES_OVER_160}}%',
+                hintContent: 'Место в рейтинге {{row.rating}}',
+                iconContent: '{{row.rating}}'
+            });
+        myMap.geoObjects.add(placemark_{{index}});
+  {% else %}
+    <li><em>Unbelievable.  No entries here so far</em>
+  {% endfor %}
         
         
     }
@@ -33,11 +44,6 @@
     </style>
 </head>
 <body>
-<!--div id="map"></div-->
-
-{% for row in results %}
-    {{ row.rating }}<br>
-{% endfor %}
-  
+<div id="map"></div>
 </body>
 </html>
